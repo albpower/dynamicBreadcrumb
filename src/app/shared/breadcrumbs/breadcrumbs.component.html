@@ -2,13 +2,13 @@
   <div class="breadcrumbs-nav">
 
     <div class="breadcrumb-item">
-      <a [href]="homeMenu.url">
+      <a routerLink="homeMenu.url">
         <i class="fas fa-home"></i>
       </a>
     </div>
     <ng-template ngFor [ngForOf]="menuItems"  let-menu>
       <div class="breadcrumb-item" *ngIf="menu !== homeMenu.url || menu !== ''">
-        <a [href]="menu.url"> {{menu.label}} </a>
+        <a routerLink="menu.url"> {{menu.label}} </a>
       </div>
     </ng-template>
     <!--
