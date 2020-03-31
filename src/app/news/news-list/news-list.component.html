@@ -1,0 +1,10 @@
+<p>news-list works!</p>
+<ul>
+  <li *ngFor="let news of newsList" style="cursor: pointer;">
+    <a (click)="navigateTo(news)"> {{news.name}} </a>
+  </li>
+</ul>
+
+<code>
+  {{newsList | json}}
+</code>

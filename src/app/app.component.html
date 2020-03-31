@@ -1,0 +1,35 @@
+<div class="container">
+  <header>
+    <h1> Logo </h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/home" [state]="{name: 'Home'}"> Home </a>
+        </li>
+
+        <li>
+          <a routerLink="/news" [state]="{name: 'News'}"> News </a>
+        </li>
+
+        <li>
+          <a routerLink="/events" [state]="{name: 'Events'}"> Events </a>
+        </li>
+
+        <li>
+          <a routerLink="/settings/user-settings"> User Settings </a>
+        </li>
+
+        <li>
+          <a routerLink="/settings/display-settings"> Display Settings </a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <breadcrumbs-container></breadcrumbs-container>
+    <router-outlet></router-outlet>
+  </main>
+</div>

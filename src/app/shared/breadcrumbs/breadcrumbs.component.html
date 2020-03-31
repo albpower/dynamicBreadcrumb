@@ -1,0 +1,25 @@
+<div class="breadcrumbs-container">
+  <div class="breadcrumbs-nav">
+
+    <div class="breadcrumb-item">
+      <a [href]="homeMenu.url">
+        <i class="fas fa-home"></i>
+      </a>
+    </div>
+    <ng-template ngFor [ngForOf]="menuItems"  let-menu>
+      <div class="breadcrumb-item" *ngIf="menu !== homeMenu.url || menu !== ''">
+        <a [href]="menu.url"> {{menu.label}} </a>
+      </div>
+    </ng-template>
+    <!--
+    <div class="breadcrumb-item"> <a href="#"> Tasks </a> </div>
+    <div class="breadcrumb-item active"> <span> Task 1 </span> </div> -->
+  </div>
+
+  <div class="breadcrumbs-actions">
+    <!-- OUTSIDE REFERENCED TEMPLATE REF -->
+    <!-- <ng-container [ngTemplateOutlet]="optionTemplateRef"
+      [ngTemplateOutletContext]="{ $implicit: option}">
+    </ng-container> -->
+  </div>
+</div>
