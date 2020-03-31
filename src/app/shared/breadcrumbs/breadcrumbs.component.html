@@ -8,7 +8,7 @@
     </div>
     <ng-template ngFor [ngForOf]="menuItems"  let-menu>
       <div class="breadcrumb-item" *ngIf="menu !== homeMenu.url || menu !== ''">
-        <a routerLink="menu.url"> {{menu.label}} </a>
+        <a (click)="navigateTo(menu.url)"> {{menu.label}} </a>
       </div>
     </ng-template>
     <!--

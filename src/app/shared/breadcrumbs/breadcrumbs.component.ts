@@ -57,6 +57,10 @@ export class BreadcrumbsComponent implements OnInit, OnDestroy {
     )
   }
 
+  navigateTo(url: string){
+    this.router.navigate([url]);
+  }
+
   ngOnDestroy(){
     this.menuItemSub.unsubscribe();
     this.breadcrumbRefreshSub.unsubscribe();
